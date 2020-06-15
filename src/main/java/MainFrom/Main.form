@@ -58,119 +58,226 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="PanelMenu_Home">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="99" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_HomeMousePressed"/>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_HomeMouseClicked"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="10" width="60" height="50"/>
+                  <AbsoluteConstraints x="0" y="10" width="80" height="50"/>
                 </Constraint>
               </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="26" max="32767" attributes="0"/>
+                          <Component id="jLabel53" min="-2" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
+                      <Component id="jLabel53" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel53">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="/home/koompi/Desktop/Student_Registration_System/images/home.png"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="PanelMenu_Student">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="99" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_StudentMousePressed"/>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_StudentMouseClicked"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="80" width="60" height="50"/>
+                  <AbsoluteConstraints x="0" y="80" width="80" height="50"/>
                 </Constraint>
               </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jLabel54" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="24" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jLabel54" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel54">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="/home/koompi/Desktop/Student_Registration_System/images/student.png"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="PanelMenu_Teacher">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="99" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_TeacherMousePressed"/>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_TeacherMouseClicked"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="150" width="60" height="50"/>
+                  <AbsoluteConstraints x="0" y="150" width="80" height="50"/>
                 </Constraint>
               </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="25" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jLabel55" min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel55">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="/home/koompi/Desktop/Student_Registration_System/images/teacher.png"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="PanelMenu_Class">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="99" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_ClassMousePressed"/>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_ClassMouseClicked"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="290" width="60" height="50"/>
+                  <AbsoluteConstraints x="0" y="290" width="80" height="50"/>
                 </Constraint>
               </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="jLabel56" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="26" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jLabel56" min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel56">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="/home/koompi/Desktop/Student_Registration_System/images/business-class.png"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="PanelMenu_Department">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="99" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_DepartmentMousePressed"/>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelMenu_DepartmentMouseClicked"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="220" width="60" height="50"/>
+                  <AbsoluteConstraints x="0" y="220" width="80" height="50"/>
                 </Constraint>
               </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jLabel57" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel57" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel57">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="/home/koompi/Desktop/Student_Registration_System/images/department.png"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
           </SubComponents>
         </Container>
@@ -226,15 +333,18 @@
                     <Property name="useNullLayout" type="boolean" value="false"/>
                   </Layout>
                   <SubComponents>
-                    <Container class="javax.swing.JPanel" name="Panel_Inter_Fra_Home4">
+                    <Container class="javax.swing.JPanel" name="jPanel1">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="66" green="ff" red="66" type="rgb"/>
+                          <Color blue="66" green="66" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="ff" red="33" type="rgb"/>
                         </Property>
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="0" y="22" width="1320" height="690"/>
+                          <AbsoluteConstraints x="0" y="0" width="1330" height="710"/>
                         </Constraint>
                       </Constraints>
 
@@ -242,41 +352,10 @@
                         <Property name="useNullLayout" type="boolean" value="false"/>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="jLabel2">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Student"/>
-                          </Properties>
+                        <Container class="javax.swing.JPanel" name="jPanel5">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="380" y="180" width="440" height="100"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
-                      </SubComponents>
-                    </Container>
-                    <Container class="javax.swing.JInternalFrame" name="InternalFrame_Home5">
-                      <Properties>
-                        <Property name="visible" type="boolean" value="true"/>
-                      </Properties>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="-10" y="-30" width="1340" height="730"/>
-                        </Constraint>
-                      </Constraints>
-
-                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                        <Property name="useNullLayout" type="boolean" value="false"/>
-                      </Layout>
-                      <SubComponents>
-                        <Container class="javax.swing.JPanel" name="Panel_Inter_Fra_Home5">
-                          <Properties>
-                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="66" green="ff" red="66" type="rgb"/>
-                            </Property>
-                          </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="0" y="22" width="1320" height="690"/>
+                              <AbsoluteConstraints x="1010" y="270" width="210" height="110"/>
                             </Constraint>
                           </Constraints>
 
@@ -284,25 +363,46 @@
                             <Property name="useNullLayout" type="boolean" value="false"/>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JLabel" name="jLabel3">
+                            <Component class="javax.swing.JLabel" name="labelHome3">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="jLabel1"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Lucida Grande" size="18" style="0"/>
+                                </Property>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="2" name="/home/koompi/Desktop/Student_Registration_System/images/business-class.png"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="Class"/>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                                    <MatteColorBorder bottom="1" left="0" right="0" top="0"/>
+                                  </Border>
+                                </Property>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="380" y="180" width="440" height="100"/>
+                                  <AbsoluteConstraints x="50" y="0" width="110" height="70"/>
+                                </Constraint>
+                              </Constraints>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="labelHomeClass">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Lucida Grande" size="18" style="0"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="10"/>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="100" y="80" width="-1" height="-1"/>
                                 </Constraint>
                               </Constraints>
                             </Component>
                           </SubComponents>
                         </Container>
-                        <Container class="javax.swing.JInternalFrame" name="InternalFrame_Home6">
-                          <Properties>
-                            <Property name="visible" type="boolean" value="true"/>
-                          </Properties>
+                        <Container class="javax.swing.JPanel" name="jPanel4">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="-10" y="-30" width="1340" height="730"/>
+                              <AbsoluteConstraints x="730" y="270" width="210" height="110"/>
                             </Constraint>
                           </Constraints>
 
@@ -310,166 +410,134 @@
                             <Property name="useNullLayout" type="boolean" value="false"/>
                           </Layout>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="Panel_Inter_Fra_Home6">
+                            <Component class="javax.swing.JLabel" name="labelHome1">
                               <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="66" green="ff" red="66" type="rgb"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Lucida Grande" size="18" style="0"/>
+                                </Property>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="2" name="/home/koompi/Desktop/Student_Registration_System/images/department.png"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="Department"/>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                                    <MatteColorBorder bottom="1" left="0" right="0" top="0"/>
+                                  </Border>
                                 </Property>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="0" y="22" width="1320" height="690"/>
+                                  <AbsoluteConstraints x="40" y="0" width="140" height="70"/>
                                 </Constraint>
                               </Constraints>
-
-                              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                                <Property name="useNullLayout" type="boolean" value="false"/>
-                              </Layout>
-                              <SubComponents>
-                                <Component class="javax.swing.JLabel" name="jLabel4">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="jLabel1"/>
-                                  </Properties>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="380" y="180" width="440" height="100"/>
-                                    </Constraint>
-                                  </Constraints>
-                                </Component>
-                              </SubComponents>
-                            </Container>
-                            <Container class="javax.swing.JInternalFrame" name="InternalFrame_Home7">
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="labelHomeDepartment">
                               <Properties>
-                                <Property name="visible" type="boolean" value="true"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Lucida Grande" size="18" style="0"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="10"/>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="-10" y="-30" width="1340" height="730"/>
+                                  <AbsoluteConstraints x="100" y="80" width="-1" height="-1"/>
                                 </Constraint>
                               </Constraints>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Container class="javax.swing.JPanel" name="jPanel3">
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="450" y="270" width="210" height="110"/>
+                            </Constraint>
+                          </Constraints>
 
-                              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                                <Property name="useNullLayout" type="boolean" value="false"/>
-                              </Layout>
-                              <SubComponents>
-                                <Container class="javax.swing.JPanel" name="Panel_Inter_Fra_Home7">
-                                  <Properties>
-                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="66" green="ff" red="66" type="rgb"/>
-                                    </Property>
-                                  </Properties>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="0" y="22" width="1320" height="690"/>
-                                    </Constraint>
-                                  </Constraints>
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                            <Property name="useNullLayout" type="boolean" value="false"/>
+                          </Layout>
+                          <SubComponents>
+                            <Component class="javax.swing.JLabel" name="labelHome">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Lucida Grande" size="18" style="0"/>
+                                </Property>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="2" name="/home/koompi/Desktop/Student_Registration_System/images/teacher.png"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="Teacher"/>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                                    <MatteColorBorder bottom="1" left="0" right="0" top="0"/>
+                                  </Border>
+                                </Property>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="50" y="0" width="110" height="70"/>
+                                </Constraint>
+                              </Constraints>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="labelHomeTeacher">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Lucida Grande" size="18" style="0"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="10"/>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="100" y="80" width="-1" height="-1"/>
+                                </Constraint>
+                              </Constraints>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Container class="javax.swing.JPanel" name="jPanel2">
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="160" y="270" width="210" height="110"/>
+                            </Constraint>
+                          </Constraints>
 
-                                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                                    <Property name="useNullLayout" type="boolean" value="false"/>
-                                  </Layout>
-                                  <SubComponents>
-                                    <Component class="javax.swing.JLabel" name="jLabel5">
-                                      <Properties>
-                                        <Property name="text" type="java.lang.String" value="jLabel1"/>
-                                      </Properties>
-                                      <Constraints>
-                                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                          <AbsoluteConstraints x="380" y="180" width="440" height="100"/>
-                                        </Constraint>
-                                      </Constraints>
-                                    </Component>
-                                  </SubComponents>
-                                </Container>
-                                <Container class="javax.swing.JInternalFrame" name="InternalFrame_Home8">
-                                  <Properties>
-                                    <Property name="visible" type="boolean" value="true"/>
-                                  </Properties>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="-10" y="-30" width="1340" height="730"/>
-                                    </Constraint>
-                                  </Constraints>
-
-                                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                                    <Property name="useNullLayout" type="boolean" value="false"/>
-                                  </Layout>
-                                  <SubComponents>
-                                    <Container class="javax.swing.JPanel" name="Panel_Inter_Fra_Home8">
-                                      <Properties>
-                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                          <Color blue="66" green="ff" red="66" type="rgb"/>
-                                        </Property>
-                                      </Properties>
-                                      <Constraints>
-                                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                          <AbsoluteConstraints x="0" y="22" width="1320" height="690"/>
-                                        </Constraint>
-                                      </Constraints>
-
-                                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                                        <Property name="useNullLayout" type="boolean" value="false"/>
-                                      </Layout>
-                                      <SubComponents>
-                                        <Component class="javax.swing.JLabel" name="jLabel6">
-                                          <Properties>
-                                            <Property name="text" type="java.lang.String" value="jLabel1"/>
-                                          </Properties>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                              <AbsoluteConstraints x="380" y="180" width="440" height="100"/>
-                                            </Constraint>
-                                          </Constraints>
-                                        </Component>
-                                      </SubComponents>
-                                    </Container>
-                                    <Container class="javax.swing.JInternalFrame" name="InternalFrame_Home9">
-                                      <Properties>
-                                        <Property name="visible" type="boolean" value="true"/>
-                                      </Properties>
-                                      <Constraints>
-                                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                          <AbsoluteConstraints x="-10" y="-30" width="1340" height="730"/>
-                                        </Constraint>
-                                      </Constraints>
-
-                                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                                        <Property name="useNullLayout" type="boolean" value="false"/>
-                                      </Layout>
-                                      <SubComponents>
-                                        <Container class="javax.swing.JPanel" name="Panel_Inter_Fra_Home9">
-                                          <Properties>
-                                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                              <Color blue="66" green="ff" red="66" type="rgb"/>
-                                            </Property>
-                                          </Properties>
-                                          <Constraints>
-                                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                              <AbsoluteConstraints x="0" y="22" width="1320" height="690"/>
-                                            </Constraint>
-                                          </Constraints>
-
-                                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                                            <Property name="useNullLayout" type="boolean" value="false"/>
-                                          </Layout>
-                                          <SubComponents>
-                                            <Component class="javax.swing.JLabel" name="jLabel7">
-                                              <Properties>
-                                                <Property name="text" type="java.lang.String" value="jLabel1"/>
-                                              </Properties>
-                                              <Constraints>
-                                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                                  <AbsoluteConstraints x="380" y="180" width="440" height="100"/>
-                                                </Constraint>
-                                              </Constraints>
-                                            </Component>
-                                          </SubComponents>
-                                        </Container>
-                                      </SubComponents>
-                                    </Container>
-                                  </SubComponents>
-                                </Container>
-                              </SubComponents>
-                            </Container>
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                            <Property name="useNullLayout" type="boolean" value="false"/>
+                          </Layout>
+                          <SubComponents>
+                            <Component class="javax.swing.JLabel" name="jLabel2">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Lucida Grande" size="18" style="0"/>
+                                </Property>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="2" name="/home/koompi/Desktop/Student_Registration_System/images/student.png"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="Student"/>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                                    <MatteColorBorder bottom="1" left="0" right="0" top="0"/>
+                                  </Border>
+                                </Property>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="50" y="0" width="110" height="70"/>
+                                </Constraint>
+                              </Constraints>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="labelHomeStudent">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Lucida Grande" size="18" style="0"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="10"/>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="100" y="80" width="-1" height="-1"/>
+                                </Constraint>
+                              </Constraints>
+                            </Component>
                           </SubComponents>
                         </Container>
                       </SubComponents>
@@ -1451,7 +1519,7 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="3">
-                                    <StringItem index="0" value="None"/>
+                                    <StringItem index="0" value="select"/>
                                     <StringItem index="1" value="male"/>
                                     <StringItem index="2" value="female"/>
                                   </StringArray>
@@ -1608,12 +1676,8 @@
                             <Component class="javax.swing.JComboBox" name="cboTeaDepartment">
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="5">
-                                    <StringItem index="0" value="None"/>
-                                    <StringItem index="1" value="IT"/>
-                                    <StringItem index="2" value="Math"/>
-                                    <StringItem index="3" value="English"/>
-                                    <StringItem index="4" value="IBM"/>
+                                  <StringArray count="1">
+                                    <StringItem index="0" value="select"/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1644,7 +1708,7 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
-                                    <StringItem index="0" value="None"/>
+                                    <StringItem index="0" value="select"/>
                                     <StringItem index="1" value="Morning"/>
                                     <StringItem index="2" value="Afternoom"/>
                                     <StringItem index="3" value="Evening"/>
@@ -1687,7 +1751,7 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="3">
-                                    <StringItem index="0" value="None"/>
+                                    <StringItem index="0" value="select"/>
                                     <StringItem index="1" value="Working"/>
                                     <StringItem index="2" value="Stoped"/>
                                   </StringArray>
@@ -2602,7 +2666,7 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="0" y="22" width="1320" height="690"/>
+                          <AbsoluteConstraints x="0" y="0" width="1330" height="720"/>
                         </Constraint>
                       </Constraints>
 

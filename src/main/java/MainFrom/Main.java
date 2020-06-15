@@ -1,6 +1,7 @@
 package MainFrom;
 
 import connection.connectsql;
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
@@ -34,10 +35,15 @@ public class Main extends javax.swing.JFrame {
     String filename = null;
     byte[] persion_image = null;
     
+    
     public Main() {
         initComponents();
+        InternalFrame_Home.setVisible(true);
+        countclass();
+        countdepartment();
+        countstudent();
+        countteacher();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,31 +56,32 @@ public class Main extends javax.swing.JFrame {
         PanelMain = new javax.swing.JPanel();
         PanelMenu = new javax.swing.JPanel();
         PanelMenu_Home = new javax.swing.JPanel();
+        jLabel53 = new javax.swing.JLabel();
         PanelMenu_Student = new javax.swing.JPanel();
+        jLabel54 = new javax.swing.JLabel();
         PanelMenu_Teacher = new javax.swing.JPanel();
+        jLabel55 = new javax.swing.JLabel();
         PanelMenu_Class = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
         PanelMenu_Department = new javax.swing.JPanel();
+        jLabel57 = new javax.swing.JLabel();
         PanelBar = new javax.swing.JPanel();
         PanelDesktop = new javax.swing.JPanel();
         DesktopPane = new javax.swing.JDesktopPane();
         InternalFrame_Home = new javax.swing.JInternalFrame();
-        Panel_Inter_Fra_Home4 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        labelHome3 = new javax.swing.JLabel();
+        labelHomeClass = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        labelHome1 = new javax.swing.JLabel();
+        labelHomeDepartment = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        labelHome = new javax.swing.JLabel();
+        labelHomeTeacher = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        InternalFrame_Home5 = new javax.swing.JInternalFrame();
-        Panel_Inter_Fra_Home5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        InternalFrame_Home6 = new javax.swing.JInternalFrame();
-        Panel_Inter_Fra_Home6 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        InternalFrame_Home7 = new javax.swing.JInternalFrame();
-        Panel_Inter_Fra_Home7 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        InternalFrame_Home8 = new javax.swing.JInternalFrame();
-        Panel_Inter_Fra_Home8 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        InternalFrame_Home9 = new javax.swing.JInternalFrame();
-        Panel_Inter_Fra_Home9 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        labelHomeStudent = new javax.swing.JLabel();
         InternalFrame_Student = new javax.swing.JInternalFrame();
         Panel_Inter_Fra_Home = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -251,100 +258,153 @@ public class Main extends javax.swing.JFrame {
         PanelMenu.setBackground(new java.awt.Color(0, 153, 153));
         PanelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        PanelMenu_Home.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_HomeMousePressed(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_HomeMouseClicked(evt);
             }
         });
 
+        jLabel53.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/home.png")); // NOI18N
+
         javax.swing.GroupLayout PanelMenu_HomeLayout = new javax.swing.GroupLayout(PanelMenu_Home);
         PanelMenu_Home.setLayout(PanelMenu_HomeLayout);
         PanelMenu_HomeLayout.setHorizontalGroup(
             PanelMenu_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenu_HomeLayout.createSequentialGroup()
+                .addContainerGap(26, Short.MAX_VALUE)
+                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
         PanelMenu_HomeLayout.setVerticalGroup(
             PanelMenu_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addComponent(jLabel53, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        PanelMenu.add(PanelMenu_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
+        PanelMenu.add(PanelMenu_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 80, 50));
 
+        PanelMenu_Student.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Student.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_StudentMousePressed(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_StudentMouseClicked(evt);
             }
         });
 
+        jLabel54.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/student.png")); // NOI18N
+
         javax.swing.GroupLayout PanelMenu_StudentLayout = new javax.swing.GroupLayout(PanelMenu_Student);
         PanelMenu_Student.setLayout(PanelMenu_StudentLayout);
         PanelMenu_StudentLayout.setHorizontalGroup(
             PanelMenu_StudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(PanelMenu_StudentLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel54)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         PanelMenu_StudentLayout.setVerticalGroup(
             PanelMenu_StudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenu_StudentLayout.createSequentialGroup()
+                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        PanelMenu.add(PanelMenu_Student, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 60, 50));
+        PanelMenu.add(PanelMenu_Student, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 80, 50));
 
+        PanelMenu_Teacher.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Teacher.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_TeacherMousePressed(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_TeacherMouseClicked(evt);
             }
         });
 
+        jLabel55.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/teacher.png")); // NOI18N
+
         javax.swing.GroupLayout PanelMenu_TeacherLayout = new javax.swing.GroupLayout(PanelMenu_Teacher);
         PanelMenu_Teacher.setLayout(PanelMenu_TeacherLayout);
         PanelMenu_TeacherLayout.setHorizontalGroup(
             PanelMenu_TeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(PanelMenu_TeacherLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel55)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         PanelMenu_TeacherLayout.setVerticalGroup(
             PanelMenu_TeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenu_TeacherLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        PanelMenu.add(PanelMenu_Teacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 60, 50));
+        PanelMenu.add(PanelMenu_Teacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 80, 50));
 
+        PanelMenu_Class.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Class.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_ClassMousePressed(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_ClassMouseClicked(evt);
             }
         });
 
+        jLabel56.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/business-class.png")); // NOI18N
+
         javax.swing.GroupLayout PanelMenu_ClassLayout = new javax.swing.GroupLayout(PanelMenu_Class);
         PanelMenu_Class.setLayout(PanelMenu_ClassLayout);
         PanelMenu_ClassLayout.setHorizontalGroup(
             PanelMenu_ClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(PanelMenu_ClassLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel56)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         PanelMenu_ClassLayout.setVerticalGroup(
             PanelMenu_ClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenu_ClassLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        PanelMenu.add(PanelMenu_Class, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 60, 50));
+        PanelMenu.add(PanelMenu_Class, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 80, 50));
 
+        PanelMenu_Department.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Department.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_DepartmentMousePressed(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_DepartmentMouseClicked(evt);
             }
         });
 
+        jLabel57.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/department.png")); // NOI18N
+
         javax.swing.GroupLayout PanelMenu_DepartmentLayout = new javax.swing.GroupLayout(PanelMenu_Department);
         PanelMenu_Department.setLayout(PanelMenu_DepartmentLayout);
         PanelMenu_DepartmentLayout.setHorizontalGroup(
             PanelMenu_DepartmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(PanelMenu_DepartmentLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel57)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         PanelMenu_DepartmentLayout.setVerticalGroup(
             PanelMenu_DepartmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGroup(PanelMenu_DepartmentLayout.createSequentialGroup()
+                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        PanelMenu.add(PanelMenu_Department, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 60, 50));
+        PanelMenu.add(PanelMenu_Department, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 80, 50));
 
         PanelMain.add(PanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 80, 690));
 
@@ -359,78 +419,67 @@ public class Main extends javax.swing.JFrame {
         InternalFrame_Home.setVisible(false);
         InternalFrame_Home.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Panel_Inter_Fra_Home4.setBackground(new java.awt.Color(102, 255, 102));
-        Panel_Inter_Fra_Home4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel1.setForeground(new java.awt.Color(51, 255, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        labelHome3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        labelHome3.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/business-class.png")); // NOI18N
+        labelHome3.setText("Class");
+        labelHome3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        jPanel5.add(labelHome3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 110, 70));
+
+        labelHomeClass.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        labelHomeClass.setText("10");
+        jPanel5.add(labelHomeClass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 270, 210, 110));
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        labelHome1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        labelHome1.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/department.png")); // NOI18N
+        labelHome1.setText("Department");
+        labelHome1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        jPanel4.add(labelHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 140, 70));
+
+        labelHomeDepartment.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        labelHomeDepartment.setText("10");
+        jPanel4.add(labelHomeDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, 210, 110));
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        labelHome.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        labelHome.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/teacher.png")); // NOI18N
+        labelHome.setText("Teacher");
+        labelHome.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        jPanel3.add(labelHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 110, 70));
+
+        labelHomeTeacher.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        labelHomeTeacher.setText("10");
+        jPanel3.add(labelHomeTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, 210, 110));
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/student.png")); // NOI18N
         jLabel2.setText("Student");
-        Panel_Inter_Fra_Home4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 440, 100));
+        jLabel2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 110, 70));
 
-        InternalFrame_Home.getContentPane().add(Panel_Inter_Fra_Home4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 22, 1320, 690));
+        labelHomeStudent.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        labelHomeStudent.setText("10");
+        jPanel2.add(labelHomeStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
 
-        InternalFrame_Home5.setVisible(true);
-        InternalFrame_Home5.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 210, 110));
 
-        Panel_Inter_Fra_Home5.setBackground(new java.awt.Color(102, 255, 102));
-        Panel_Inter_Fra_Home5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setText("jLabel1");
-        Panel_Inter_Fra_Home5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 440, 100));
-
-        InternalFrame_Home5.getContentPane().add(Panel_Inter_Fra_Home5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 22, 1320, 690));
-
-        InternalFrame_Home6.setVisible(true);
-        InternalFrame_Home6.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Panel_Inter_Fra_Home6.setBackground(new java.awt.Color(102, 255, 102));
-        Panel_Inter_Fra_Home6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setText("jLabel1");
-        Panel_Inter_Fra_Home6.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 440, 100));
-
-        InternalFrame_Home6.getContentPane().add(Panel_Inter_Fra_Home6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 22, 1320, 690));
-
-        InternalFrame_Home7.setVisible(true);
-        InternalFrame_Home7.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Panel_Inter_Fra_Home7.setBackground(new java.awt.Color(102, 255, 102));
-        Panel_Inter_Fra_Home7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setText("jLabel1");
-        Panel_Inter_Fra_Home7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 440, 100));
-
-        InternalFrame_Home7.getContentPane().add(Panel_Inter_Fra_Home7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 22, 1320, 690));
-
-        InternalFrame_Home8.setVisible(true);
-        InternalFrame_Home8.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Panel_Inter_Fra_Home8.setBackground(new java.awt.Color(102, 255, 102));
-        Panel_Inter_Fra_Home8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setText("jLabel1");
-        Panel_Inter_Fra_Home8.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 440, 100));
-
-        InternalFrame_Home8.getContentPane().add(Panel_Inter_Fra_Home8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 22, 1320, 690));
-
-        InternalFrame_Home9.setVisible(true);
-        InternalFrame_Home9.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Panel_Inter_Fra_Home9.setBackground(new java.awt.Color(102, 255, 102));
-        Panel_Inter_Fra_Home9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setText("jLabel1");
-        Panel_Inter_Fra_Home9.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 440, 100));
-
-        InternalFrame_Home9.getContentPane().add(Panel_Inter_Fra_Home9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 22, 1320, 690));
-
-        InternalFrame_Home8.getContentPane().add(InternalFrame_Home9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
-
-        InternalFrame_Home7.getContentPane().add(InternalFrame_Home8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
-
-        InternalFrame_Home6.getContentPane().add(InternalFrame_Home7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
-
-        InternalFrame_Home5.getContentPane().add(InternalFrame_Home6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
-
-        InternalFrame_Home.getContentPane().add(InternalFrame_Home5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
+        InternalFrame_Home.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 710));
 
         DesktopPane.add(InternalFrame_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
 
@@ -793,7 +842,7 @@ public class Main extends javax.swing.JFrame {
         jLabel35.setText("Address");
         PanelTeaPersonal_Info1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 120, 30));
 
-        cboTeaGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "male", "female" }));
+        cboTeaGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select", "male", "female" }));
         cboTeaGender.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cboTeaGenderItemStateChanged(evt);
@@ -842,7 +891,7 @@ public class Main extends javax.swing.JFrame {
         jLabel37.setText("Salary");
         PanelTeaDepartment.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 120, 30));
 
-        cboTeaDepartment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "IT", "Math", "English", "IBM" }));
+        cboTeaDepartment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select" }));
         cboTeaDepartment.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cboTeaDepartmentItemStateChanged(evt);
@@ -858,7 +907,7 @@ public class Main extends javax.swing.JFrame {
         jLabel39.setText("Time");
         PanelTeaDepartment.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 120, 30));
 
-        cboTeaTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Morning", "Afternoom", "Evening" }));
+        cboTeaTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select", "Morning", "Afternoom", "Evening" }));
         cboTeaTime.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cboTeaTimeItemStateChanged(evt);
@@ -872,7 +921,7 @@ public class Main extends javax.swing.JFrame {
         jLabel40.setText("Start Date");
         PanelTeaDepartment.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 120, 30));
 
-        cboTeaStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Working", "Stoped" }));
+        cboTeaStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select", "Working", "Stoped" }));
         cboTeaStatus.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 cboTeaStatusKeyReleased(evt);
@@ -1230,7 +1279,7 @@ public class Main extends javax.swing.JFrame {
         jLabel10.setText("jLabel1");
         Panel_Inter_Fra_Home12.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 440, 100));
 
-        InternalFrame_Home12.getContentPane().add(Panel_Inter_Fra_Home12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 22, 1320, 690));
+        InternalFrame_Home12.getContentPane().add(Panel_Inter_Fra_Home12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 720));
 
         DesktopPane.add(InternalFrame_Home12, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
 
@@ -1244,15 +1293,21 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void PanelMenu_HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_HomeMouseClicked
-        InternalFrame_Home.setVisible(false);
+        InternalFrame_Home.setVisible(true);
         InternalFrame_Class.setVisible(false);
         InternalFrame_Student.setVisible(false);
+        InternalFrame_Teacher.setVisible(false);
         RefreshTableStudent();
+        countstudent();
+        countteacher();
+        countdepartment();
+        countclass();
     }//GEN-LAST:event_PanelMenu_HomeMouseClicked
 
     private void PanelMenu_StudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_StudentMouseClicked
         InternalFrame_Class.setVisible(false);
-        InternalFrame_Home.setVisible(true);
+        InternalFrame_Home.setVisible(false);
+        InternalFrame_Teacher.setVisible(false);
         InternalFrame_Student.setVisible(true);
         RefreshTableStudent();
         AddcboStuDepartment();
@@ -1262,23 +1317,86 @@ public class Main extends javax.swing.JFrame {
         InternalFrame_Student.setVisible(false);
         InternalFrame_Home.setVisible(false);
         InternalFrame_Teacher.setVisible(true);
-        RefreshTableTeacher();
+        RefreshTeaTableTeacher();
+        AddcboTeaDepartment();
     }//GEN-LAST:event_PanelMenu_TeacherMouseClicked
-    // Resfresh Student
+    
+    
+    //function count student
+    public void countstudent(){
+        try{
+            String count = "select count(firstname) from tbstudent";
+            PreparedStatement ps = con.prepareStatement(count);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            int counts = rs.getInt(1);
+            labelHomeStudent.setText(Integer.toString(counts));
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+    
+    //function count teacher
+     public void countteacher(){
+        try{
+            String count = "select count(firstname) from tbteacher";
+            PreparedStatement ps = con.prepareStatement(count);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            int counts = rs.getInt(1);
+            labelHomeTeacher.setText(Integer.toString(counts));
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }       
+    }
+     
+    //function count department
+     public void countdepartment(){
+        try{
+            String count = "select count(department) from tbdepartments";
+            PreparedStatement ps = con.prepareStatement(count);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            int counts = rs.getInt(1);
+            labelHomeDepartment.setText(Integer.toString(counts));
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }          
+    }
+     
+    //function count class
+     public void countclass(){
+        try{
+            String count = "select count(department_name) from tbclass";
+            PreparedStatement ps = con.prepareStatement(count);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            int counts = rs.getInt(1);
+            labelHomeClass.setText(Integer.toString(counts));
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }     
+    }
+     
+// Resfresh table Student
     public void RefreshTableStudent(){
         txtstuID.setText("");
         txtstuFristname.setText("");
         txtStuLastname.setText("");
-        cboStuGender.setSelectedItem("None");
+        cboStuGender.setSelectedItem("select");
         txtStuPhone.setText("");
         txtStuEmail.setText("");
         txtStuAddress.setText("");
-        cboStuDepartment.setSelectedItem("None");
+        cboStuDepartment.setSelectedItem("select");
         txtStuPrice.setText("0");
         cboStuClass.setSelectedItem("");
-        cboStuTime.setSelectedItem("None");
+        cboStuTime.setSelectedItem("select");
         txtStuStartdate.setDate(null);
-        cboStuStatus.setSelectedItem("None");
+        cboStuStatus.setSelectedItem("select");
         lbStuPhoto.setIcon(null);
         try{
             
@@ -1313,20 +1431,74 @@ public class Main extends javax.swing.JFrame {
         }
     }
 
+    // Add department to cboStudepartment
+    public void AddcboStuDepartment (){
+        try{
+            cboStuDepartment.removeAllItems();
+            cboStuDepartment.addItem("select");
+            String getdepartment = "select * from tbdepartments";
+            PreparedStatement ps = con.prepareStatement(getdepartment);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                
+                cboStuDepartment.addItem(rs.getString(2));
+            }
+        }catch(Exception e){
+//            JOptionPane.showMessageDialog(null, e);
+        }         
+    }
+    
+    //Add class to cboStuclass
+    public void AddcboStuClass(){
+        try{
+            cboStuClass.removeAllItems();
+            cboStuClass.addItem("None");
+            String selectdepartment = cboStuDepartment.getSelectedItem().toString();
+            String getdepartment = "select * from tbclass where department_name='" + selectdepartment + "'";
+            PreparedStatement ps = con.prepareStatement(getdepartment);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                
+                cboStuClass.addItem(rs.getString(3));
+            }
+        }catch(Exception e){
+//            JOptionPane.showMessageDialog(null, e);
+            
+        }
+    }
+    
+    // Add department to cboTeadepartment
+    public void AddcboTeaDepartment (){
+        try{
+            cboTeaDepartment.removeAllItems();
+            cboTeaDepartment.addItem("select");
+            String getdepartment = "select * from tbdepartments";
+            PreparedStatement ps = con.prepareStatement(getdepartment);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                
+                cboTeaDepartment.addItem(rs.getString(2));
+            }
+        }catch(Exception e){
+//            JOptionPane.showMessageDialog(null, e);
+        }         
+    }
+    
+    
     // Resfresh Teacher
     public void RefreshTeaTableTeacher(){
         txtTeaID.setText("");
         txtTeaFristname.setText("");
         txtTeaLastname.setText("");
-        cboStuGender.setSelectedItem("None");
+        cboTeaGender.setSelectedItem("select");
         txtTeaPhone.setText("");
         txtTeaEmail.setText("");
         txtTeaAddress.setText("");
-        cboTeaDepartment.setSelectedItem("None");
+        cboTeaDepartment.setSelectedItem("select");
         cboTeaTime.setSelectedItem("select");
         txtTeaSalary.setText("0");
         txtTeaStartdate.setDate(null);
-        cboTeaStatus.setSelectedItem("None");
+        cboTeaStatus.setSelectedItem("select");
         lbTeaPhoto.setIcon(null);
         try{
             
@@ -1359,51 +1531,51 @@ public class Main extends javax.swing.JFrame {
         }
     }
     
-    public void RefreshTableTeacher(){
-        txtTeaID.setText("");
-        txtTeaFristname.setText("");
-        txtTeaLastname.setText("");
-        cboTeaGender.setSelectedItem("None");
-        txtTeaPhone.setText("");
-        txtTeaEmail.setText("");
-        txtTeaAddress.setText("");
-        cboTeaDepartment.setSelectedItem("None");
-        txtTeaSalary.setText("0");
-        cboStuTime.setSelectedItem("None");
-        txtStuStartdate.setDate(null);
-        cboStuStatus.setSelectedItem("None");
-        lbStuPhoto.setIcon(null);
-        try{
-            
-            String seleteteacher = "select * from tbteacher";
-            PreparedStatement ps = con.prepareStatement(seleteteacher);
-            ResultSet rs = ps.executeQuery();
-            DefaultTableModel model = new DefaultTableModel();
-            tbTeacher.setModel(model);
-            
-            model.addColumn("ID");
-            model.addColumn("First  Name");
-            model.addColumn("Last Name");
-            model.addColumn("Gender");
-            model.addColumn("Email");
-            model.addColumn("Phone");
-            model.addColumn("Address");
-            model.addColumn("Department");
-            model.addColumn("Time");
-            model.addColumn("Price");
-            model.addColumn("Start Date");
-            model.addColumn("Status");
-            
-            while(rs.next()){
-                model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),
-                                                          rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),
-                                                          rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),
-                                                          });
-            }
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }
+//    public void RefreshTableTeacher(){
+//        txtTeaID.setText("");
+//        txtTeaFristname.setText("");
+//        txtTeaLastname.setText("");
+//        cboTeaGender.setSelectedItem("None");
+//        txtTeaPhone.setText("");
+//        txtTeaEmail.setText("");
+//        txtTeaAddress.setText("");
+//        cboTeaDepartment.setSelectedItem("None");
+//        txtTeaSalary.setText("0");
+//        cboStuTime.setSelectedItem("None");
+//        txtStuStartdate.setDate(null);
+//        cboStuStatus.setSelectedItem("None");
+//        lbStuPhoto.setIcon(null);
+//        try{
+//            
+//            String seleteteacher = "select * from tbteacher";
+//            PreparedStatement ps = con.prepareStatement(seleteteacher);
+//            ResultSet rs = ps.executeQuery();
+//            DefaultTableModel model = new DefaultTableModel();
+//            tbTeacher.setModel(model);
+//            
+//            model.addColumn("ID");
+//            model.addColumn("First  Name");
+//            model.addColumn("Last Name");
+//            model.addColumn("Gender");
+//            model.addColumn("Email");
+//            model.addColumn("Phone");
+//            model.addColumn("Address");
+//            model.addColumn("Department");
+//            model.addColumn("Time");
+//            model.addColumn("Price");
+//            model.addColumn("Start Date");
+//            model.addColumn("Status");
+//            
+//            while(rs.next()){
+//                model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),
+//                                                          rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),
+//                                                          rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),
+//                                                          });
+//            }
+//        }catch (Exception e){
+//            JOptionPane.showMessageDialog(null, e);
+//        }
+//    }
     
     private void btnStuCreateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStuCreateMouseClicked
         
@@ -1436,7 +1608,7 @@ public class Main extends javax.swing.JFrame {
             lbStuRequireLstName.setText("*");
             txtStuLastname.requestFocus();
         }
-        else if (cboStuGender.getSelectedItem() == "None"){
+        else if (cboStuGender.getSelectedItem() == "select"){
             lbStuRequireGender.setText("*");
             cboStuGender.requestFocus();
         }
@@ -1452,7 +1624,7 @@ public class Main extends javax.swing.JFrame {
             lbStuRequireAddress.setText("*");
             txtStuAddress.requestFocus();
         }
-        else if (cboStuDepartment.getSelectedItem() == "None"){
+        else if (cboStuDepartment.getSelectedItem() == "select"){
             lbStuRequireDepart.setText("*");
             cboStuDepartment.requestFocus();
         }
@@ -1460,7 +1632,7 @@ public class Main extends javax.swing.JFrame {
             lbStuRequireClass.setText("*");
             cboStuClass.requestFocus();
         }
-        else if (cboStuTime.getSelectedItem() == "None"){
+        else if (cboStuTime.getSelectedItem() == "select"){
             lbStuRequireTime.setText("*");
             cboStuTime.requestFocus();
         }
@@ -1468,7 +1640,7 @@ public class Main extends javax.swing.JFrame {
             lbStuRequireStartDate.setText("*");
             txtStuStartdate.requestFocus();
         }
-        else if (cboStuStatus.getSelectedItem() == "None"){
+        else if (cboStuStatus.getSelectedItem() == "select"){
             lbStuRequireStatus.setText("*");
             cboStuStatus.requestFocus();
         }
@@ -1505,6 +1677,7 @@ public class Main extends javax.swing.JFrame {
                     ps.executeUpdate();
                     labelresult.setText("Create student sucessfully.");
                     RefreshTableStudent();
+                    AddcboStuDepartment();
                 }
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, e);
@@ -1581,38 +1754,7 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_btnStuChoosePhotoMouseClicked
-    public void AddcboStuClass(){
-        try{
-            cboStuClass.removeAllItems();
-            cboStuClass.addItem("None");
-            String selectdepartment = cboStuDepartment.getSelectedItem().toString();
-            String getdepartment = "select * from tbclass where department_name='" + selectdepartment + "'";
-            PreparedStatement ps = con.prepareStatement(getdepartment);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()){
-                
-                cboStuClass.addItem(rs.getString(3));
-            }
-        }catch(Exception e){
-//            JOptionPane.showMessageDialog(null, e);
-            
-        }
-    }
-    public void AddcboStuDepartment (){
-        try{
-            cboStuDepartment.removeAllItems();
-            cboStuDepartment.addItem("select");
-            String getdepartment = "select * from tbdepartments";
-            PreparedStatement ps = con.prepareStatement(getdepartment);
-            ResultSet rs = ps.executeQuery();
-            while(rs.next()){
-                
-                cboStuDepartment.addItem(rs.getString(2));
-            }
-        }catch(Exception e){
-//            JOptionPane.showMessageDialog(null, e);
-        }         
-    }
+   
     public void SetStuPrice(){   
         try{
             txtStuPrice.setText("0");
@@ -1908,7 +2050,8 @@ public class Main extends javax.swing.JFrame {
                     ps.setBytes(12, persion_image);
                     ps.executeUpdate();
                     labelresult.setText("Create Teacher sucessfully.");
-                    RefreshTableTeacher();
+                    RefreshTeaTableTeacher();
+                    AddcboTeaDepartment();
                 }
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, e);
@@ -1942,8 +2085,8 @@ public class Main extends javax.swing.JFrame {
             
             psu.executeUpdate();
             
-            RefreshTableStudent();
             RefreshTeaTableTeacher();
+            AddcboTeaDepartment();
             labelresult.setText("Update sucessfully.");
             
         }catch(Exception e){
@@ -2340,6 +2483,47 @@ public class Main extends javax.swing.JFrame {
         }        
     }//GEN-LAST:event_tbClassRoomMouseClicked
 
+    private void PanelMenu_HomeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_HomeMousePressed
+        PanelMenu_Home.setBackground(Color.yellow);
+        PanelMenu_Teacher.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Department.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Class.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Student.setBackground(new  java.awt.Color(153,204,255));
+    }//GEN-LAST:event_PanelMenu_HomeMousePressed
+
+    private void PanelMenu_StudentMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_StudentMousePressed
+        PanelMenu_Home.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Teacher.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Department.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Class.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Student.setBackground(Color.yellow);
+
+    }//GEN-LAST:event_PanelMenu_StudentMousePressed
+
+    private void PanelMenu_TeacherMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_TeacherMousePressed
+        PanelMenu_Home.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Teacher.setBackground(Color.yellow);
+        PanelMenu_Department.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Class.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Student.setBackground(new  java.awt.Color(153,204,255));
+    }//GEN-LAST:event_PanelMenu_TeacherMousePressed
+
+    private void PanelMenu_DepartmentMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_DepartmentMousePressed
+        PanelMenu_Home.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Teacher.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Department.setBackground(Color.yellow);
+        PanelMenu_Class.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Student.setBackground(new  java.awt.Color(153,204,255));
+    }//GEN-LAST:event_PanelMenu_DepartmentMousePressed
+
+    private void PanelMenu_ClassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_ClassMousePressed
+        PanelMenu_Home.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Teacher.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Department.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Class.setBackground(Color.yellow);
+        PanelMenu_Student.setBackground(new  java.awt.Color(153,204,255));
+    }//GEN-LAST:event_PanelMenu_ClassMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -2383,11 +2567,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JInternalFrame InternalFrame_Department;
     private javax.swing.JInternalFrame InternalFrame_Home;
     private javax.swing.JInternalFrame InternalFrame_Home12;
-    private javax.swing.JInternalFrame InternalFrame_Home5;
-    private javax.swing.JInternalFrame InternalFrame_Home6;
-    private javax.swing.JInternalFrame InternalFrame_Home7;
-    private javax.swing.JInternalFrame InternalFrame_Home8;
-    private javax.swing.JInternalFrame InternalFrame_Home9;
     private javax.swing.JInternalFrame InternalFrame_Student;
     private javax.swing.JInternalFrame InternalFrame_Teacher;
     private javax.swing.JPanel PanelBar;
@@ -2411,12 +2590,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel Panel_Inter_Fra_Home10;
     private javax.swing.JPanel Panel_Inter_Fra_Home11;
     private javax.swing.JPanel Panel_Inter_Fra_Home12;
-    private javax.swing.JPanel Panel_Inter_Fra_Home4;
-    private javax.swing.JPanel Panel_Inter_Fra_Home5;
-    private javax.swing.JPanel Panel_Inter_Fra_Home6;
-    private javax.swing.JPanel Panel_Inter_Fra_Home7;
-    private javax.swing.JPanel Panel_Inter_Fra_Home8;
-    private javax.swing.JPanel Panel_Inter_Fra_Home9;
     private javax.swing.JPanel Panel_Inter_Fra_Teacher;
     private javax.swing.JLabel Price;
     private javax.swing.JButton btnClaAdd;
@@ -2468,7 +2641,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -2479,7 +2651,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -2490,13 +2661,20 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -2508,6 +2686,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JLabel labelHome;
+    private javax.swing.JLabel labelHome1;
+    private javax.swing.JLabel labelHome3;
+    private javax.swing.JLabel labelHomeClass;
+    private javax.swing.JLabel labelHomeDepartment;
+    private javax.swing.JLabel labelHomeStudent;
+    private javax.swing.JLabel labelHomeTeacher;
     private javax.swing.JLabel labelresult;
     private javax.swing.JLabel labelresultteacher;
     private javax.swing.JLabel lbStuPhoto;
