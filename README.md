@@ -48,21 +48,29 @@ Open `Apache Netbeans IDE 12.0` and Open this project. You need to change userna
 
 * Home Form
 
-![](https://lh3.googleusercontent.com/m5gWuki_NStAEIeuLNWA1vBO7VNk4dj3G6_RHgwHhVVKAcDc5yEl0WnyE2FKEjmIuVx8w31voVHk=s1980)
+![home form](photo/java2.PNG)
+
 * Student Registration Form
 
-![studenthere](https://lh3.googleusercontent.com/86Bh832N9VkQmEYqkL0PqbiugwwpRGyq_0COgePTANPMWZ5ggCCx-MA70NOIoHM5vLJuSc5F2Dmc=s1980)
+![student form](photo/java3.PNG)
+
 * Teacher Form
 
-![teachere](https://lh3.googleusercontent.com/CbXuZ4spoNOrHgnSbMyblbDU7XVzX7vm0diKQGIIiEp2PouTY9hxeihlvVxZ9TY_dt-VuYEIj3Qr=s1980)
+
+![Teacher form](photo/java6.PNG)
+
 * Department Form
 
-![department](https://lh3.googleusercontent.com/hLoHiN_gSg8fRPcfXnHMobzjf08c6W4UtHdax-vB1GJQ2uGPsMtXvjcYB4a-FHswNL96i4aUKx4W=s1980)
+
+![department form](photo/java5.PNG)
+
 * Class Form
 
-![class](https://lh3.googleusercontent.com/kaAz8T0caViBD8lvbssqJ44t8njPH8Yp5q_UTd8Y2aZAUjLxCswIp5QCPj009LVquG_r1ebkualO=s1980)
+
+![class form](photo/java7.PNG)
 
 * Staff Form
 
-![staffhttps://lh3.googleusercontent.com/iCKjwXNBMe4cEm3ktDxwZuoofNEAwF23M9Po9soTck_ZmFKyH9CWTHPWxJP05fe3FAwPsAdvFlv2=s1980)
+
+![staff form](photo/java8.PNG)
 
