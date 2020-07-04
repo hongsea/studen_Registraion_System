@@ -44,7 +44,7 @@ Open `Apache Netbeans IDE 12.0` and Open this project. You need to change userna
 
 * Login Form
 
-![login form](photo/java1.png)
+![login form](photo/java1.PNG)
 
 * Home Form
 
