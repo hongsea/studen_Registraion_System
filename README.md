@@ -43,17 +43,17 @@ Open `Apache Netbeans IDE 12.0` and Open this project. You need to change userna
 
 * Login Form
 
-![enter image description here](https://lh3.googleusercontent.com/93mefL31NEUFMx55v4u_Jay_FqdocayY1cfUaWt2KaRZQhXA8Skfa1EnNDvf2yg8jm9Ugb6v8n8Q)
+![enter image description here](https://lh3.googleusercontent.com/93mefL31NEUFMx55v4u_Jay_FqdocayY1cfUaWt2KaRZQhXA8Skfa1EnNDvf2yg8jm9Ugb6v8n8Q=s1920 "login")
 
 * Home Form
 
-![home](https://lh3.googleusercontent.com/m5gWuki_NStAEIeuLNWA1vBO7VNk4dj3G6_RHgwHhVVKAcDc5yEl0WnyE2FKEjmIuVx8w31voVHk=s1980)
+![](https://lh3.googleusercontent.com/m5gWuki_NStAEIeuLNWA1vBO7VNk4dj3G6_RHgwHhVVKAcDc5yEl0WnyE2FKEjmIuVx8w31voVHk=s1980)
 * Student Registration Form
 
-![student](https://lh3.googleusercontent.com/86Bh832N9VkQmEYqkL0PqbiugwwpRGyq_0COgePTANPMWZ5ggCCx-MA70NOIoHM5vLJuSc5F2Dmc=s1980)
+![studenthere](https://lh3.googleusercontent.com/86Bh832N9VkQmEYqkL0PqbiugwwpRGyq_0COgePTANPMWZ5ggCCx-MA70NOIoHM5vLJuSc5F2Dmc=s1980)
 * Teacher Form
 
-![teacher](https://lh3.googleusercontent.com/CbXuZ4spoNOrHgnSbMyblbDU7XVzX7vm0diKQGIIiEp2PouTY9hxeihlvVxZ9TY_dt-VuYEIj3Qr=s1980)
+![teachere](https://lh3.googleusercontent.com/CbXuZ4spoNOrHgnSbMyblbDU7XVzX7vm0diKQGIIiEp2PouTY9hxeihlvVxZ9TY_dt-VuYEIj3Qr=s1980)
 * Department Form
 
 ![department](https://lh3.googleusercontent.com/hLoHiN_gSg8fRPcfXnHMobzjf08c6W4UtHdax-vB1GJQ2uGPsMtXvjcYB4a-FHswNL96i4aUKx4W=s1980)
@@ -63,5 +63,5 @@ Open `Apache Netbeans IDE 12.0` and Open this project. You need to change userna
 
 * Staff Form
 
-![staff](https://lh3.googleusercontent.com/iCKjwXNBMe4cEm3ktDxwZuoofNEAwF23M9Po9soTck_ZmFKyH9CWTHPWxJP05fe3FAwPsAdvFlv2=s1980)
+![staffhttps://lh3.googleusercontent.com/iCKjwXNBMe4cEm3ktDxwZuoofNEAwF23M9Po9soTck_ZmFKyH9CWTHPWxJP05fe3FAwPsAdvFlv2=s1980)
 
