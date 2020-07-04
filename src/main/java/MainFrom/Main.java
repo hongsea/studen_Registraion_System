@@ -3,6 +3,7 @@ package MainFrom;
 import connection.connectsql;
 import java.awt.Color;
 import java.awt.Image;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -27,6 +28,8 @@ import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import Login.LoginForm;
+import javax.swing.ImageIcon.*;
 
 public class Main extends javax.swing.JFrame {
 
@@ -34,6 +37,7 @@ public class Main extends javax.swing.JFrame {
     String imagePath = null;
     String filename = null;
     byte[] persion_image = null;
+    byte[] staff_image = null;
     
     
     public Main() {
@@ -43,6 +47,12 @@ public class Main extends javax.swing.JFrame {
         countdepartment();
         countstudent();
         countteacher();
+        txtstuID.setEditable(false);
+        txtTeaID.setEditable(false);
+        txtDepID.setEditable(false);
+        txtClaID.setEditable(false);
+        txtstaffID.setEditable(false);
+       
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -57,15 +67,24 @@ public class Main extends javax.swing.JFrame {
         PanelMenu = new javax.swing.JPanel();
         PanelMenu_Home = new javax.swing.JPanel();
         jLabel53 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         PanelMenu_Student = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         PanelMenu_Teacher = new javax.swing.JPanel();
         jLabel55 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         PanelMenu_Class = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
         PanelMenu_Department = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        PanelMenu_Staff = new javax.swing.JPanel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         PanelBar = new javax.swing.JPanel();
+        lablelogout = new javax.swing.JLabel();
         PanelDesktop = new javax.swing.JPanel();
         DesktopPane = new javax.swing.JDesktopPane();
         InternalFrame_Home = new javax.swing.JInternalFrame();
@@ -135,10 +154,9 @@ public class Main extends javax.swing.JFrame {
         btnStuChoosePhoto = new javax.swing.JButton();
         lbStuRequirePhoto = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        btnStuCancel = new javax.swing.JButton();
+        btnStuClear = new javax.swing.JButton();
         btnStuCreate = new javax.swing.JButton();
         btnStuUpdate = new javax.swing.JButton();
-        btnStuDelete = new javax.swing.JButton();
         labelresult = new javax.swing.JLabel();
         InternalFrame_Teacher = new javax.swing.JInternalFrame();
         Panel_Inter_Fra_Teacher = new javax.swing.JPanel();
@@ -191,10 +209,9 @@ public class Main extends javax.swing.JFrame {
         btnTeaChoosePhoto = new javax.swing.JButton();
         lbTeaRequirePhoto = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
-        btnTeaCancel = new javax.swing.JButton();
+        btnteaclear = new javax.swing.JButton();
         btnTeaCreate = new javax.swing.JButton();
         btnTeaUpdate = new javax.swing.JButton();
-        btnTeaDelete = new javax.swing.JButton();
         labelresultteacher = new javax.swing.JLabel();
         InternalFrame_Department = new javax.swing.JInternalFrame();
         Panel_Inter_Fra_Home11 = new javax.swing.JPanel();
@@ -245,8 +262,52 @@ public class Main extends javax.swing.JFrame {
         jLabel45 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
-        InternalFrame_Home12 = new javax.swing.JInternalFrame();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        InternalFrame_Staff = new javax.swing.JInternalFrame();
         Panel_Inter_Fra_Home12 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        tbstaff = new javax.swing.JTable();
+        txtstaffID = new javax.swing.JTextField();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        txtstaffName = new javax.swing.JTextField();
+        jLabel61 = new javax.swing.JLabel();
+        txtstaffphone = new javax.swing.JTextField();
+        txtstaffaddress = new javax.swing.JTextField();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        cbostaffstatus = new javax.swing.JComboBox<>();
+        jLabel65 = new javax.swing.JLabel();
+        txtstaffusernamelogin = new javax.swing.JTextField();
+        jLabel66 = new javax.swing.JLabel();
+        txtstaffconfirmpassword = new javax.swing.JTextField();
+        jLabel67 = new javax.swing.JLabel();
+        labelstaffphoto = new javax.swing.JLabel();
+        btnstaffbrower = new javax.swing.JButton();
+        btnstaffclear = new javax.swing.JButton();
+        jLabel69 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel70 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel71 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        btnstaffadd = new javax.swing.JButton();
+        txtstaffupdate = new javax.swing.JButton();
+        txtstaffpasword = new javax.swing.JTextField();
+        labelstaffgender = new javax.swing.JLabel();
+        labelstaffconfirmpassword = new javax.swing.JLabel();
+        labelstaffname = new javax.swing.JLabel();
+        labelstaffID = new javax.swing.JLabel();
+        labelstaffphone = new javax.swing.JLabel();
+        labelstaffaddress = new javax.swing.JLabel();
+        labelstaffstatus = new javax.swing.JLabel();
+        labelstaffusername = new javax.swing.JLabel();
+        labelstaffpassword = new javax.swing.JLabel();
+        cbostaffgender = new javax.swing.JComboBox<>();
+        labelstaffscuess = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -260,156 +321,137 @@ public class Main extends javax.swing.JFrame {
 
         PanelMenu_Home.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Home.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                PanelMenu_HomeMousePressed(evt);
-            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_HomeMouseClicked(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_HomeMousePressed(evt);
+            }
         });
+        PanelMenu_Home.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel53.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/home.png")); // NOI18N
+        jLabel53.setIcon(new javax.swing.ImageIcon("D:\\RUPPYear3\\Java-Programming\\semester2\\Assignment\\studen_Registraion_System-master\\src\\main\\java\\image\\home.png")); // NOI18N
+        PanelMenu_Home.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 0, 30, 30));
 
-        javax.swing.GroupLayout PanelMenu_HomeLayout = new javax.swing.GroupLayout(PanelMenu_Home);
-        PanelMenu_Home.setLayout(PanelMenu_HomeLayout);
-        PanelMenu_HomeLayout.setHorizontalGroup(
-            PanelMenu_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenu_HomeLayout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
-        );
-        PanelMenu_HomeLayout.setVerticalGroup(
-            PanelMenu_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel53, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("        Home");
+        PanelMenu_Home.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 80, 20));
 
         PanelMenu.add(PanelMenu_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 80, 50));
 
         PanelMenu_Student.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Student.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                PanelMenu_StudentMousePressed(evt);
-            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_StudentMouseClicked(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_StudentMousePressed(evt);
+            }
         });
+        PanelMenu_Student.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel54.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/student.png")); // NOI18N
+        jLabel54.setIcon(new javax.swing.ImageIcon("D:\\RUPPYear3\\Java-Programming\\semester2\\Assignment\\studen_Registraion_System-master\\src\\main\\java\\image\\student.png")); // NOI18N
+        PanelMenu_Student.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 0, 31, 30));
 
-        javax.swing.GroupLayout PanelMenu_StudentLayout = new javax.swing.GroupLayout(PanelMenu_Student);
-        PanelMenu_Student.setLayout(PanelMenu_StudentLayout);
-        PanelMenu_StudentLayout.setHorizontalGroup(
-            PanelMenu_StudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMenu_StudentLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel54)
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-        PanelMenu_StudentLayout.setVerticalGroup(
-            PanelMenu_StudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenu_StudentLayout.createSequentialGroup()
-                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setText("      Student");
+        PanelMenu_Student.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 80, 20));
 
         PanelMenu.add(PanelMenu_Student, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 80, 50));
 
         PanelMenu_Teacher.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Teacher.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                PanelMenu_TeacherMousePressed(evt);
-            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_TeacherMouseClicked(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_TeacherMousePressed(evt);
+            }
         });
+        PanelMenu_Teacher.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel55.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/teacher.png")); // NOI18N
+        jLabel55.setIcon(new javax.swing.ImageIcon("D:\\RUPPYear3\\Java-Programming\\semester2\\Assignment\\studen_Registraion_System-master\\src\\main\\java\\image\\teacher.png")); // NOI18N
+        PanelMenu_Teacher.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 0, 30, -1));
 
-        javax.swing.GroupLayout PanelMenu_TeacherLayout = new javax.swing.GroupLayout(PanelMenu_Teacher);
-        PanelMenu_Teacher.setLayout(PanelMenu_TeacherLayout);
-        PanelMenu_TeacherLayout.setHorizontalGroup(
-            PanelMenu_TeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMenu_TeacherLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel55)
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-        PanelMenu_TeacherLayout.setVerticalGroup(
-            PanelMenu_TeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenu_TeacherLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText("      Teacher");
+        PanelMenu_Teacher.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 80, 20));
 
         PanelMenu.add(PanelMenu_Teacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 80, 50));
 
         PanelMenu_Class.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Class.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                PanelMenu_ClassMousePressed(evt);
-            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_ClassMouseClicked(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_ClassMousePressed(evt);
+            }
         });
+        PanelMenu_Class.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel56.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/business-class.png")); // NOI18N
+        jLabel56.setIcon(new javax.swing.ImageIcon("D:\\RUPPYear3\\Java-Programming\\semester2\\Assignment\\studen_Registraion_System-master\\src\\main\\java\\image\\business-class.png")); // NOI18N
+        PanelMenu_Class.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 0, 30, 30));
 
-        javax.swing.GroupLayout PanelMenu_ClassLayout = new javax.swing.GroupLayout(PanelMenu_Class);
-        PanelMenu_Class.setLayout(PanelMenu_ClassLayout);
-        PanelMenu_ClassLayout.setHorizontalGroup(
-            PanelMenu_ClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMenu_ClassLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel56)
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-        PanelMenu_ClassLayout.setVerticalGroup(
-            PanelMenu_ClassLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenu_ClassLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel52.setText("       Class");
+        PanelMenu_Class.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 80, 20));
 
         PanelMenu.add(PanelMenu_Class, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 80, 50));
 
         PanelMenu_Department.setBackground(new java.awt.Color(153, 204, 255));
         PanelMenu_Department.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                PanelMenu_DepartmentMousePressed(evt);
-            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelMenu_DepartmentMouseClicked(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_DepartmentMousePressed(evt);
+            }
         });
+        PanelMenu_Department.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel57.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/department.png")); // NOI18N
+        jLabel57.setIcon(new javax.swing.ImageIcon("D:\\RUPPYear3\\Java-Programming\\semester2\\Assignment\\studen_Registraion_System-master\\src\\main\\java\\image\\department.png")); // NOI18N
+        PanelMenu_Department.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 30, 30));
 
-        javax.swing.GroupLayout PanelMenu_DepartmentLayout = new javax.swing.GroupLayout(PanelMenu_Department);
-        PanelMenu_Department.setLayout(PanelMenu_DepartmentLayout);
-        PanelMenu_DepartmentLayout.setHorizontalGroup(
-            PanelMenu_DepartmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMenu_DepartmentLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel57)
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
-        PanelMenu_DepartmentLayout.setVerticalGroup(
-            PanelMenu_DepartmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMenu_DepartmentLayout.createSequentialGroup()
-                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setText(" Department");
+        PanelMenu_Department.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 80, 20));
 
         PanelMenu.add(PanelMenu_Department, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 80, 50));
+
+        PanelMenu_Staff.setBackground(new java.awt.Color(153, 204, 255));
+        PanelMenu_Staff.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PanelMenu_StaffMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelMenu_StaffMousePressed(evt);
+            }
+        });
+        PanelMenu_Staff.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel58.setIcon(new javax.swing.ImageIcon("D:\\RUPPYear3\\Java-Programming\\semester2\\Assignment\\studen_Registraion_System-master\\images\\staff.png")); // NOI18N
+        PanelMenu_Staff.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 0, 30, 30));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setText("        Staff");
+        PanelMenu_Staff.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 80, 20));
+
+        PanelMenu.add(PanelMenu_Staff, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 80, 50));
 
         PanelMain.add(PanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 80, 690));
 
         PanelBar.setBackground(new java.awt.Color(153, 153, 0));
         PanelBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lablelogout.setIcon(new javax.swing.ImageIcon("D:\\RUPPYear3\\Java-Programming\\semester2\\Assignment\\studen_Registraion_System-master\\images\\logout.png")); // NOI18N
+        lablelogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lablelogoutMouseClicked(evt);
+            }
+        });
+        PanelBar.add(lablelogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 0, 40, 40));
+
         PanelMain.add(PanelBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1400, 40));
 
         PanelDesktop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -426,8 +468,7 @@ public class Main extends javax.swing.JFrame {
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelHome3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        labelHome3.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/business-class.png")); // NOI18N
-        labelHome3.setText("Class");
+        labelHome3.setText("       Class");
         labelHome3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jPanel5.add(labelHome3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 110, 70));
 
@@ -440,8 +481,7 @@ public class Main extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelHome1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        labelHome1.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/department.png")); // NOI18N
-        labelHome1.setText("Department");
+        labelHome1.setText("     Department");
         labelHome1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jPanel4.add(labelHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 140, 70));
 
@@ -454,8 +494,7 @@ public class Main extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelHome.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        labelHome.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/teacher.png")); // NOI18N
-        labelHome.setText("Teacher");
+        labelHome.setText("     Teacher");
         labelHome.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jPanel3.add(labelHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 110, 70));
 
@@ -468,8 +507,7 @@ public class Main extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon("/home/koompi/Desktop/Student_Registration_System/images/student.png")); // NOI18N
-        jLabel2.setText("Student");
+        jLabel2.setText("     Student");
         jLabel2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 110, 70));
 
@@ -720,8 +758,13 @@ public class Main extends javax.swing.JFrame {
         jLabel14.setText("Department");
         Panel_Inter_Fra_Home.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, 190, -1));
 
-        btnStuCancel.setText("CANCEL");
-        Panel_Inter_Fra_Home.add(btnStuCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 300, 130, 40));
+        btnStuClear.setText("CLEAR");
+        btnStuClear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnStuClearMouseClicked(evt);
+            }
+        });
+        Panel_Inter_Fra_Home.add(btnStuClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 240, 130, 40));
 
         btnStuCreate.setText("CREATE");
         btnStuCreate.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -738,9 +781,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Panel_Inter_Fra_Home.add(btnStuUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 180, 130, 40));
-
-        btnStuDelete.setText("DELETE");
-        Panel_Inter_Fra_Home.add(btnStuDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 240, 130, 40));
         Panel_Inter_Fra_Home.add(labelresult, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 350, 150, 30));
 
         InternalFrame_Student.getContentPane().add(Panel_Inter_Fra_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2, 1330, 710));
@@ -760,14 +800,10 @@ public class Main extends javax.swing.JFrame {
 
         tbTeacher.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
-                "ID", "First Name", "Last Name", "Gender", "Email", "Phone", "Address", "Department", "Price", "Class", "Time", "Status"
+
             }
         ));
         tbTeacher.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -984,8 +1020,13 @@ public class Main extends javax.swing.JFrame {
         jLabel43.setText("Department");
         Panel_Inter_Fra_Teacher.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, 190, -1));
 
-        btnTeaCancel.setText("CANCEL");
-        Panel_Inter_Fra_Teacher.add(btnTeaCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 330, 130, 40));
+        btnteaclear.setText("CLEAR");
+        btnteaclear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnteaclearMouseClicked(evt);
+            }
+        });
+        Panel_Inter_Fra_Teacher.add(btnteaclear, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 250, 130, 40));
 
         btnTeaCreate.setText("CREATE");
         btnTeaCreate.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1002,9 +1043,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Panel_Inter_Fra_Teacher.add(btnTeaUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 190, 130, 40));
-
-        btnTeaDelete.setText("DELETE");
-        Panel_Inter_Fra_Teacher.add(btnTeaDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 260, 130, 40));
         Panel_Inter_Fra_Teacher.add(labelresultteacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 350, 150, 30));
 
         InternalFrame_Teacher.getContentPane().add(Panel_Inter_Fra_Teacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2, 1330, 710));
@@ -1251,37 +1289,167 @@ public class Main extends javax.swing.JFrame {
 
         Panel_Inter_Fra_Home10.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 250, 510, 200));
 
-        jLabel45.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel45.setText("Student Learn Morning");
-        Panel_Inter_Fra_Home10.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, 270, 20));
+        jLabel45.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        jLabel45.setText("Show Class In Department");
+        Panel_Inter_Fra_Home10.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 270, 20));
 
         jLabel48.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel48.setText("Student Learn Evening");
+        jLabel48.setText("Show Student Learn Evening");
         Panel_Inter_Fra_Home10.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 450, 270, 20));
 
         jLabel51.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel51.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel51.setText("Student Learn Aftermoon");
+        jLabel51.setText("Show Student Learn Aftermoon");
         Panel_Inter_Fra_Home10.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 230, 270, 20));
+
+        jLabel68.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel68.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel68.setText("Show Student Learn Morning");
+        Panel_Inter_Fra_Home10.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, 270, 20));
+
+        jLabel72.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        jLabel72.setText("Show Teacher In Department");
+        Panel_Inter_Fra_Home10.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 270, 20));
 
         InternalFrame_Class.getContentPane().add(Panel_Inter_Fra_Home10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2, 1330, 710));
 
         DesktopPane.add(InternalFrame_Class, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
 
-        InternalFrame_Home12.setVisible(false);
-        InternalFrame_Home12.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        InternalFrame_Staff.setVisible(false);
+        InternalFrame_Staff.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Panel_Inter_Fra_Home12.setBackground(new java.awt.Color(102, 255, 102));
+        Panel_Inter_Fra_Home12.setBackground(new java.awt.Color(255, 255, 255));
         Panel_Inter_Fra_Home12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setText("jLabel1");
-        Panel_Inter_Fra_Home12.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 440, 100));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        InternalFrame_Home12.getContentPane().add(Panel_Inter_Fra_Home12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 720));
+        tbstaff.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
 
-        DesktopPane.add(InternalFrame_Home12, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
+            },
+            new String [] {
+
+            }
+        ));
+        tbstaff.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbstaffMouseClicked(evt);
+            }
+        });
+        jScrollPane12.setViewportView(tbstaff);
+
+        jPanel6.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 237, 1230, 370));
+        jPanel6.add(txtstaffID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 190, 30));
+
+        jLabel59.setText("StaffID");
+        jPanel6.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 20));
+
+        jLabel60.setText("Staff Name");
+        jPanel6.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 100, 20));
+        jPanel6.add(txtstaffName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 190, 30));
+
+        jLabel61.setText("Phone Number");
+        jPanel6.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 100, 20));
+        jPanel6.add(txtstaffphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 190, 30));
+        jPanel6.add(txtstaffaddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 190, 30));
+
+        jLabel62.setText("Address");
+        jPanel6.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 100, 20));
+
+        jLabel63.setText("Gender");
+        jPanel6.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 100, 20));
+
+        jLabel64.setText("Status");
+        jPanel6.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 100, 20));
+
+        cbostaffstatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select", "working", "stoped" }));
+        jPanel6.add(cbostaffstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 190, 30));
+
+        jLabel65.setText("Username login");
+        jPanel6.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 100, 20));
+        jPanel6.add(txtstaffusernamelogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 30, 190, 30));
+
+        jLabel66.setText("Password");
+        jPanel6.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 80, 100, 20));
+        jPanel6.add(txtstaffconfirmpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 130, 190, 30));
+
+        jLabel67.setText("Confirm Password");
+        jPanel6.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 130, 100, 20));
+
+        labelstaffphoto.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 0, 0)));
+        jPanel6.add(labelstaffphoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 20, 110, 120));
+
+        btnstaffbrower.setText("Brower");
+        btnstaffbrower.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnstaffbrowerMouseClicked(evt);
+            }
+        });
+        jPanel6.add(btnstaffbrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 150, 110, 20));
+
+        btnstaffclear.setText("Clear");
+        btnstaffclear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnstaffclearMouseClicked(evt);
+            }
+        });
+        jPanel6.add(btnstaffclear, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 180, 80, 30));
+
+        jLabel69.setText("Phone Number");
+        jPanel6.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 100, 20));
+        jPanel6.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 190, 30));
+
+        jLabel70.setText("Address");
+        jPanel6.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 100, 20));
+        jPanel6.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 190, 30));
+
+        jLabel71.setText("Status");
+        jPanel6.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 100, 20));
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel6.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 190, 30));
+
+        btnstaffadd.setText("Add");
+        btnstaffadd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnstaffaddMouseClicked(evt);
+            }
+        });
+        jPanel6.add(btnstaffadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 180, 80, 30));
+
+        txtstaffupdate.setText("Update");
+        txtstaffupdate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtstaffupdateMouseClicked(evt);
+            }
+        });
+        jPanel6.add(txtstaffupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 180, 80, 30));
+        jPanel6.add(txtstaffpasword, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 80, 190, 30));
+        jPanel6.add(labelstaffgender, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 30, 30));
+        jPanel6.add(labelstaffconfirmpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 130, 30, 30));
+        jPanel6.add(labelstaffname, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 30, 30));
+        jPanel6.add(labelstaffID, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 30, 30));
+        jPanel6.add(labelstaffphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 30, 30, 30));
+        jPanel6.add(labelstaffaddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, 30, 30));
+        jPanel6.add(labelstaffstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 130, 30, 30));
+        jPanel6.add(labelstaffusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 30, 30, 30));
+        jPanel6.add(labelstaffpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 80, 30, 30));
+
+        cbostaffgender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select", "Male", "Female" }));
+        jPanel6.add(cbostaffgender, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 190, 30));
+        jPanel6.add(labelstaffscuess, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 210, 220, 20));
+
+        Panel_Inter_Fra_Home12.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 1270, 620));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setText("Create Staff");
+        jLabel10.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 204, 204)));
+        Panel_Inter_Fra_Home12.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 1270, 30));
+
+        InternalFrame_Staff.getContentPane().add(Panel_Inter_Fra_Home12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 720));
+
+        DesktopPane.add(InternalFrame_Staff, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 1340, 730));
 
         PanelDesktop.add(DesktopPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1320, 690));
 
@@ -1431,6 +1599,45 @@ public class Main extends javax.swing.JFrame {
         }
     }
 
+// Resfresh table Student
+    public void RefreshTablestaff(){
+        txtstaffID.setText("");
+        txtstaffName.setText("");
+        cbostaffgender.setSelectedItem("select");
+        txtstaffphone.setText("");
+        txtstaffaddress.setText("");
+        cbostaffstatus.setSelectedItem("select");
+        txtstaffusernamelogin.setText("");
+        txtstaffpasword.setText("");
+        txtstaffconfirmpassword.setText("");
+        labelstaffphoto.setIcon(null);
+        try{
+            
+            String seletestudent = "select * from tbstaff";
+            PreparedStatement ps = con.prepareStatement(seletestudent);
+            ResultSet rs = ps.executeQuery();
+            DefaultTableModel model = new DefaultTableModel();
+            tbstaff.setModel(model);
+            
+            model.addColumn("ID");
+            model.addColumn("Staff Name");
+            model.addColumn("Gender");
+            model.addColumn("Phone Number");
+            model.addColumn("Address");
+            model.addColumn("Status");
+            model.addColumn("Username");
+            model.addColumn("Password");
+            
+            while(rs.next()){
+                model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),
+                                                          rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),
+                                                          rs.getString(9)});
+            }
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+    
     // Add department to cboStudepartment
     public void AddcboStuDepartment (){
         try{
@@ -1580,11 +1787,11 @@ public class Main extends javax.swing.JFrame {
     private void btnStuCreateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStuCreateMouseClicked
         
         if (txtstuFristname.getText().trim().isEmpty() && txtStuLastname.getText().trim().isEmpty() &&
-            cboStuGender.getSelectedItem() == "None" && txtStuEmail.getText().trim().isEmpty() && 
+            cboStuGender.getSelectedItem() == "select" && txtStuEmail.getText().trim().isEmpty() && 
             txtStuPhone.getText().trim().isEmpty() && txtStuAddress.getText().trim().isEmpty() && 
-            cboStuDepartment.getSelectedItem() == "None" && cboStuClass.getSelectedItem() == "None" &&
-            cboStuTime.getSelectedItem() == "None" && txtStuStartdate.getDate() == null && 
-            cboStuStatus.getSelectedItem() == "None" ){
+            cboStuDepartment.getSelectedItem() == "select" && cboStuClass.getSelectedItem() == "select" &&
+            cboStuTime.getSelectedItem() == "select" && txtStuStartdate.getDate() == null && 
+            cboStuStatus.getSelectedItem() == "select" ){
             
             lbStuRequireFisName.setText("*");
             lbStuRequireLstName.setText("*");
@@ -1628,7 +1835,7 @@ public class Main extends javax.swing.JFrame {
             lbStuRequireDepart.setText("*");
             cboStuDepartment.requestFocus();
         }
-        else if (cboStuClass.getSelectedItem() == "None"){
+        else if (cboStuClass.getSelectedItem() == "select"){
             lbStuRequireClass.setText("*");
             cboStuClass.requestFocus();
         }
@@ -1987,7 +2194,7 @@ public class Main extends javax.swing.JFrame {
             lbTeaRequireLstName.setText("*");
             txtTeaLastname.requestFocus();
         }
-        else if (cboTeaGender.getSelectedItem() == "None"){
+        else if (cboTeaGender.getSelectedItem() == "select"){
             lbTeaRequireGender.setText("*");
             cboTeaGender.requestFocus();
         }
@@ -2003,7 +2210,7 @@ public class Main extends javax.swing.JFrame {
             lbTeaRequireAddress.setText("*");
             txtTeaAddress.requestFocus();
         }
-        else if (cboTeaDepartment.getSelectedItem() == "None"){
+        else if (cboTeaDepartment.getSelectedItem() == "select"){
             lbTeaRequireDepart1.setText("*");
             cboTeaDepartment.requestFocus();
         }
@@ -2015,7 +2222,7 @@ public class Main extends javax.swing.JFrame {
             lbTeaRequireStartDate.setText("*");
             txtTeaStartdate.requestFocus();
         }
-        else if (cboTeaStatus.getSelectedItem() == "None"){
+        else if (cboTeaStatus.getSelectedItem() == "select"){
             lbTearequirStatus.setText("*");
             cboTeaStatus.requestFocus();
         }
@@ -2489,6 +2696,7 @@ public class Main extends javax.swing.JFrame {
         PanelMenu_Department.setBackground(new  java.awt.Color(153,204,255));
         PanelMenu_Class.setBackground(new  java.awt.Color(153,204,255));
         PanelMenu_Student.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Staff.setBackground(new  java.awt.Color(153,204,255));
     }//GEN-LAST:event_PanelMenu_HomeMousePressed
 
     private void PanelMenu_StudentMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_StudentMousePressed
@@ -2497,6 +2705,7 @@ public class Main extends javax.swing.JFrame {
         PanelMenu_Department.setBackground(new  java.awt.Color(153,204,255));
         PanelMenu_Class.setBackground(new  java.awt.Color(153,204,255));
         PanelMenu_Student.setBackground(Color.yellow);
+        PanelMenu_Staff.setBackground(new  java.awt.Color(153,204,255));
 
     }//GEN-LAST:event_PanelMenu_StudentMousePressed
 
@@ -2506,6 +2715,7 @@ public class Main extends javax.swing.JFrame {
         PanelMenu_Department.setBackground(new  java.awt.Color(153,204,255));
         PanelMenu_Class.setBackground(new  java.awt.Color(153,204,255));
         PanelMenu_Student.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Staff.setBackground(new  java.awt.Color(153,204,255));
     }//GEN-LAST:event_PanelMenu_TeacherMousePressed
 
     private void PanelMenu_DepartmentMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_DepartmentMousePressed
@@ -2514,6 +2724,7 @@ public class Main extends javax.swing.JFrame {
         PanelMenu_Department.setBackground(Color.yellow);
         PanelMenu_Class.setBackground(new  java.awt.Color(153,204,255));
         PanelMenu_Student.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Staff.setBackground(new  java.awt.Color(153,204,255));
     }//GEN-LAST:event_PanelMenu_DepartmentMousePressed
 
     private void PanelMenu_ClassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_ClassMousePressed
@@ -2522,7 +2733,233 @@ public class Main extends javax.swing.JFrame {
         PanelMenu_Department.setBackground(new  java.awt.Color(153,204,255));
         PanelMenu_Class.setBackground(Color.yellow);
         PanelMenu_Student.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Staff.setBackground(new  java.awt.Color(153,204,255));
     }//GEN-LAST:event_PanelMenu_ClassMousePressed
+
+    private void PanelMenu_StaffMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_StaffMousePressed
+        PanelMenu_Home.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Teacher.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Department.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Class.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Student.setBackground(new  java.awt.Color(153,204,255));
+        PanelMenu_Staff.setBackground(Color.yellow);
+    }//GEN-LAST:event_PanelMenu_StaffMousePressed
+
+    private void PanelMenu_StaffMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMenu_StaffMouseClicked
+        InternalFrame_Class.setVisible(false);
+        InternalFrame_Department.setVisible(false);
+        InternalFrame_Home.setVisible(false);
+        InternalFrame_Student.setVisible(false);
+        InternalFrame_Teacher.setVisible(false);
+        InternalFrame_Staff.setVisible(true);
+        RefreshTablestaff();
+    }//GEN-LAST:event_PanelMenu_StaffMouseClicked
+
+    private void lablelogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lablelogoutMouseClicked
+        LoginForm lf = new LoginForm();
+        lf.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lablelogoutMouseClicked
+
+    private void btnstaffaddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnstaffaddMouseClicked
+        if (txtstaffName.getText().trim().isEmpty() && cbostaffgender.getSelectedItem() == "select" &&
+            txtstaffphone.getText().trim().isEmpty() && txtstaffaddress.getText().trim().isEmpty() && 
+            cbostaffstatus.getSelectedItem() == "select" && txtstaffusernamelogin.getText().trim().isEmpty() &&
+            txtstaffpasword.getText().trim().isEmpty() && txtstaffconfirmpassword.getText().trim().isEmpty()){
+            
+            labelstaffname.setText("*");
+            labelstaffgender.setText("*");
+            labelstaffphone.setText("*");
+            labelstaffaddress.setText("*");
+            labelstaffstatus.setText("*");
+            labelstaffusername.setText("*");
+            labelstaffpassword.setText("*");
+            labelstaffconfirmpassword.setText("*");
+        }
+        
+        else if (txtstaffName.getText().trim().isEmpty()){
+            labelstaffname.setText("*");
+            txtstaffName.requestFocus();
+        }
+        else if (cbostaffgender.getSelectedItem() == "select"){
+            labelstaffgender.setText("*");
+            cbostaffgender.requestFocus();
+        }
+        else if (txtstaffphone.getText().trim().isEmpty()){
+            labelstaffphone.setText("*");
+            txtstaffphone.requestFocus();
+        }
+        else if (txtstaffaddress.getText().trim().isEmpty()){
+            labelstaffaddress.setText("*");
+            txtstaffaddress.requestFocus();
+        }
+        else if (cbostaffstatus.getSelectedItem() == "select"){
+            labelstaffstatus.setText("*");
+            cbostaffstatus.requestFocus();
+        }
+        else if (txtstaffusernamelogin.getText().trim().isEmpty()){
+            labelstaffusername.setText("*");
+            txtstaffusernamelogin.requestFocus();
+        }
+        else if (txtstaffpasword.getText().trim().isEmpty()){
+            labelstaffpassword.setText("*");
+            txtstaffpasword.requestFocus();
+        }
+        else if (txtstaffconfirmpassword.getText().trim().isEmpty()){
+            labelstaffconfirmpassword.setText("*");
+            txtstaffconfirmpassword.requestFocus();
+        }
+        else {
+            try{
+                Statement stat = con.createStatement();
+                String selectquery = "select * from tbstaff where staffname='" +  txtstaffName.getText().trim() + "'";
+                ResultSet rs = stat.executeQuery(selectquery);
+                if(rs.next() == true){
+                    labelstaffscuess.setText("Status already created.");
+                }
+                else{
+                    String insertstatudent = "insert into tbstaff (staffname,gender,phone,address,status,usernamelogin,password,photo) values(?,?,?,?,?,?,?,?)";
+                    PreparedStatement ps = con.prepareStatement(insertstatudent);
+                    
+                    ps.setString(1, txtstaffName.getText().trim());
+                    ps.setString(2, cbostaffgender.getSelectedItem().toString());
+                    ps.setString(3, txtstaffphone.getText().trim());
+                    ps.setString(4, txtstaffaddress.getText().trim());
+                    ps.setString(5, cbostaffstatus.getSelectedItem().toString());
+                    ps.setString(6, txtstaffusernamelogin.getText().trim());
+                    ps.setString(7, txtstaffpasword.getText().trim());
+                    ps.setBytes(8, staff_image);
+                    ps.executeUpdate();
+                    labelstaffscuess.setText("Create student sucessfully.");
+                    RefreshTablestaff();
+                }
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+            }
+        }
+    }//GEN-LAST:event_btnstaffaddMouseClicked
+
+    private void btnstaffbrowerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnstaffbrowerMouseClicked
+        JFileChooser chooser = new JFileChooser();
+        chooser.showOpenDialog(null);
+        File f = chooser.getSelectedFile();
+        filename = f.getAbsolutePath();
+        ImageIcon imageIcon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(labelstaffphoto.getWidth(),labelstaffphoto.getHeight(),Image.SCALE_SMOOTH));
+        labelstaffphoto.setIcon(imageIcon);
+        try{
+            File image = new File(filename);
+            FileInputStream fis = new FileInputStream(image);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            byte[] buf = new byte[1024];
+            for (int readNum;(readNum=fis.read(buf)) !=-1;){
+                bos.write(buf,0,readNum);
+            }
+            staff_image=bos.toByteArray();
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_btnstaffbrowerMouseClicked
+
+    private void tbstaffMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbstaffMouseClicked
+        try{
+            int i = tbstaff.getSelectedRow();
+            TableModel tm = tbstaff.getModel();
+            txtstaffID.setText(tm.getValueAt(i, 0).toString());
+            String viewquery = "select * from tbstaff where id=?";
+            PreparedStatement ps = con.prepareStatement(viewquery);
+            ps.setString(1, txtstaffID.getText().trim());
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                txtstaffName.setText(rs.getString(2));
+                cbostaffgender.setSelectedItem(rs.getString(3));
+                txtstaffphone.setText(rs.getString(4));
+                txtstaffaddress.setText(rs.getString(5));
+                cbostaffstatus.setSelectedItem(rs.getString(6));
+                txtstaffusernamelogin.setText(rs.getString(7));
+                txtstaffpasword.setText(rs.getString(8));
+
+                Blob im = rs.getBlob(9);
+                byte[] imbyte  = im.getBytes(1, (int)im.length());
+                ImageIcon imageIcon = new ImageIcon(new ImageIcon(imbyte).getImage().getScaledInstance(labelstaffphoto.getWidth(),labelstaffphoto.getHeight(),Image.SCALE_SMOOTH));
+                labelstaffphoto.setIcon(imageIcon);
+                
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_tbstaffMouseClicked
+
+    private void txtstaffupdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtstaffupdateMouseClicked
+        int s = tbstaff.getSelectedRow();
+        try{
+            
+            String value=(tbstaff.getModel().getValueAt(s, 0).toString());
+            String updatequery = "update tbstaff SET staffname=?, gender=?, phone=?, address=?, status=?, usernamelogin=?, password=?, photo=? where id="+value;
+            PreparedStatement psu = con.prepareStatement(updatequery);
+            
+            psu.setString(1, txtstaffName.getText().trim());
+            psu.setString(2, cbostaffgender.getSelectedItem().toString());
+            psu.setString(3, txtstaffphone.getText().trim());
+            psu.setString(4, txtstaffaddress.getText().trim());
+            psu.setString(5, cbostaffstatus.getSelectedItem().toString());
+            psu.setString(6, txtstaffusernamelogin.getText().trim());
+            psu.setString(7, txtstaffpasword.getText().trim());
+           
+            psu.setBytes(8, staff_image);
+            
+            psu.executeUpdate();
+            RefreshTablestaff();
+            labelstaffscuess.setText("Update sucessfully.");
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+    }//GEN-LAST:event_txtstaffupdateMouseClicked
+
+    private void btnstaffclearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnstaffclearMouseClicked
+        txtstaffID.setText("");
+        txtstaffName.setText("");
+        cbostaffgender.setSelectedItem("select");
+        txtstaffphone.setText("");
+        txtstaffaddress.setText("");
+        cbostaffstatus.setSelectedItem("select");
+        txtstaffusernamelogin.setText("");
+        txtstaffpasword.setText("");
+        txtstaffconfirmpassword.setText("");
+    }//GEN-LAST:event_btnstaffclearMouseClicked
+
+    private void btnStuClearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStuClearMouseClicked
+        txtstuID.setText("");
+        txtstuFristname.setText("");
+        txtStuLastname.setText("");
+        cboStuGender.setSelectedItem("select");
+        txtStuEmail.setText("");
+        txtStuPhone.setText("");
+        txtStuAddress.setText("");
+        cboStuDepartment.setSelectedItem("select");
+        txtStuPrice.setText("0");
+        cboStuClass.setSelectedItem("select");
+        txtStuStartdate.cleanup();
+        cboStuStatus.setSelectedItem("select");
+        lbStuPhoto.setIcon(null);
+    }//GEN-LAST:event_btnStuClearMouseClicked
+
+    private void btnteaclearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnteaclearMouseClicked
+        txtTeaID.setText("");
+        txtTeaFristname.setText("");
+        txtTeaLastname.setText("");
+        cboTeaGender.setSelectedItem("select");
+        txtTeaEmail.setText("");
+        txtTeaPhone.setText("");
+        txtTeaAddress.setText("");
+        cboTeaDepartment.setSelectedItem("select");
+        cboTeaTime.setSelectedItem("select");
+        txtTeaSalary.setText("");
+        txtTeaStartdate.cleanup();
+        cboTeaStatus.setSelectedItem("select");
+        lbTeaPhoto.setIcon(null);
+    }//GEN-LAST:event_btnteaclearMouseClicked
 
     /**
      * @param args the command line arguments
@@ -2566,7 +3003,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JInternalFrame InternalFrame_Class;
     private javax.swing.JInternalFrame InternalFrame_Department;
     private javax.swing.JInternalFrame InternalFrame_Home;
-    private javax.swing.JInternalFrame InternalFrame_Home12;
+    private javax.swing.JInternalFrame InternalFrame_Staff;
     private javax.swing.JInternalFrame InternalFrame_Student;
     private javax.swing.JInternalFrame InternalFrame_Teacher;
     private javax.swing.JPanel PanelBar;
@@ -2576,6 +3013,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel PanelMenu_Class;
     private javax.swing.JPanel PanelMenu_Department;
     private javax.swing.JPanel PanelMenu_Home;
+    private javax.swing.JPanel PanelMenu_Staff;
     private javax.swing.JPanel PanelMenu_Student;
     private javax.swing.JPanel PanelMenu_Teacher;
     private javax.swing.JPanel PanelStuDepartment;
@@ -2596,16 +3034,17 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnClaClear;
     private javax.swing.JButton btnClaUpdate;
     private javax.swing.JButton btnDepAdd;
-    private javax.swing.JButton btnStuCancel;
     private javax.swing.JButton btnStuChoosePhoto;
+    private javax.swing.JButton btnStuClear;
     private javax.swing.JButton btnStuCreate;
-    private javax.swing.JButton btnStuDelete;
     private javax.swing.JButton btnStuUpdate;
-    private javax.swing.JButton btnTeaCancel;
     private javax.swing.JButton btnTeaChoosePhoto;
     private javax.swing.JButton btnTeaCreate;
-    private javax.swing.JButton btnTeaDelete;
     private javax.swing.JButton btnTeaUpdate;
+    private javax.swing.JButton btnstaffadd;
+    private javax.swing.JButton btnstaffbrower;
+    private javax.swing.JButton btnstaffclear;
+    private javax.swing.JButton btnteaclear;
     private javax.swing.JComboBox<String> cboClaDepartmentname;
     private javax.swing.JComboBox<String> cboClaShowDepartment;
     private javax.swing.JComboBox<String> cboClaStatus;
@@ -2619,6 +3058,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cboTeaGender;
     private javax.swing.JComboBox<String> cboTeaStatus;
     private javax.swing.JComboBox<String> cboTeaTime;
+    private javax.swing.JComboBox<String> cbostaffgender;
+    private javax.swing.JComboBox<String> cbostaffstatus;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2641,6 +3083,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -2651,6 +3094,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -2661,13 +3105,32 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -2675,9 +3138,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2686,6 +3151,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel labelHome;
     private javax.swing.JLabel labelHome1;
     private javax.swing.JLabel labelHome3;
@@ -2695,6 +3162,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel labelHomeTeacher;
     private javax.swing.JLabel labelresult;
     private javax.swing.JLabel labelresultteacher;
+    private javax.swing.JLabel labelstaffID;
+    private javax.swing.JLabel labelstaffaddress;
+    private javax.swing.JLabel labelstaffconfirmpassword;
+    private javax.swing.JLabel labelstaffgender;
+    private javax.swing.JLabel labelstaffname;
+    private javax.swing.JLabel labelstaffpassword;
+    private javax.swing.JLabel labelstaffphone;
+    private javax.swing.JLabel labelstaffphoto;
+    private javax.swing.JLabel labelstaffscuess;
+    private javax.swing.JLabel labelstaffstatus;
+    private javax.swing.JLabel labelstaffusername;
+    private javax.swing.JLabel lablelogout;
     private javax.swing.JLabel lbStuPhoto;
     private javax.swing.JLabel lbStuRequireAddress;
     private javax.swing.JLabel lbStuRequireClass;
@@ -2732,6 +3211,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTable tbDepDespartment;
     private javax.swing.JTable tbStudent;
     private javax.swing.JTable tbTeacher;
+    private javax.swing.JTable tbstaff;
     private javax.swing.JTextField txtClaClass;
     private javax.swing.JTextField txtClaID;
     private javax.swing.JButton txtDepClear;
@@ -2753,6 +3233,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField txtTeaPhone;
     private javax.swing.JTextField txtTeaSalary;
     private com.toedter.calendar.JDateChooser txtTeaStartdate;
+    private javax.swing.JTextField txtstaffID;
+    private javax.swing.JTextField txtstaffName;
+    private javax.swing.JTextField txtstaffaddress;
+    private javax.swing.JTextField txtstaffconfirmpassword;
+    private javax.swing.JTextField txtstaffpasword;
+    private javax.swing.JTextField txtstaffphone;
+    private javax.swing.JButton txtstaffupdate;
+    private javax.swing.JTextField txtstaffusernamelogin;
     private javax.swing.JTextField txtstuFristname;
     private javax.swing.JTextField txtstuID;
     // End of variables declaration//GEN-END:variables
