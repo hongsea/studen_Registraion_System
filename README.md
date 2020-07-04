@@ -42,11 +42,11 @@ Table: tbstudent, tbteacher, tbdepartments, tbclass, tbstaff
 Open `Apache Netbeans IDE 12.0` and Open this project. You need to change username and password for connect to SQL Database in `Login Form` . And then run Login Form and login username `admin` and password `admin`.
 
 
-* Login Form
+* **Login Form**
 
 ![login form](photo/java1.PNG)
 
-* Home Form
+* **Home Form**
 
 ![home form](photo/java2.PNG)
 
@@ -54,22 +54,22 @@ Open `Apache Netbeans IDE 12.0` and Open this project. You need to change userna
 
 ![student form](photo/java3.PNG)
 
-* Teacher Form
+* **Teacher Form**
 
 
 ![Teacher form](photo/java6.PNG)
 
-* Department Form
+* **Department Form**
 
 
 ![department form](photo/java5.PNG)
 
-* Class Form
+* **Class Form**
 
 
 ![class form](photo/java7.PNG)
 
-* Staff Form
+* **Staff Form**
 
 
 ![staff form](photo/java8.PNG)
