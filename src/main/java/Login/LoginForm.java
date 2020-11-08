@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import MainFrom.Main;
+
 public class LoginForm extends javax.swing.JFrame {
 
     /**
@@ -26,45 +27,35 @@ public class LoginForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        backgroundlogin = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         txtlogin_username = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         btnlogin_signin = new javax.swing.JButton();
-        btnlogin_cancel = new javax.swing.JButton();
         passwordlable = new javax.swing.JLabel();
         usernamelable = new javax.swing.JLabel();
         txtlogin_password = new javax.swing.JPasswordField();
         faillable = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1369, 768));
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.setForeground(new java.awt.Color(204, 0, 51));
+        backgroundlogin.setBackground(new java.awt.Color(204, 255, 204));
+        backgroundlogin.setForeground(new java.awt.Color(204, 0, 51));
+        backgroundlogin.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("LOGIN");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
-
+        txtlogin_username.setText("username");
         txtlogin_username.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtlogin_usernameKeyReleased(evt);
             }
         });
-        jPanel2.add(txtlogin_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 240, 30));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Username ");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 70, 30));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Password");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 70, 30));
+        jPanel2.add(txtlogin_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 270, 40));
 
         btnlogin_signin.setText("Sign In");
         btnlogin_signin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -72,47 +63,39 @@ public class LoginForm extends javax.swing.JFrame {
                 btnlogin_signinMouseClicked(evt);
             }
         });
-        jPanel2.add(btnlogin_signin, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 90, 30));
+        jPanel2.add(btnlogin_signin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 190, 40));
+        jPanel2.add(passwordlable, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 270, 10));
+        jPanel2.add(usernamelable, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 270, 10));
 
-        btnlogin_cancel.setText("Cancel");
-        jPanel2.add(btnlogin_cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 90, 30));
-        jPanel2.add(passwordlable, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 240, 10));
-        jPanel2.add(usernamelable, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 240, 10));
-
+        txtlogin_password.setText("password");
         txtlogin_password.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtlogin_passwordKeyReleased(evt);
             }
         });
-        jPanel2.add(txtlogin_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 240, 30));
-        jPanel2.add(faillable, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 190, 30));
+        jPanel2.add(txtlogin_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 270, 40));
+        jPanel2.add(faillable, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 190, 30));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(199, 199, 199)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(211, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/profile.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 130, 110));
+
+        backgroundlogin.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, 350, 470));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/backgroundlogo.jpg"))); // NOI18N
+        jLabel4.setMinimumSize(new java.awt.Dimension(1368, 768));
+        jLabel4.setPreferredSize(new java.awt.Dimension(1368, 768));
+        backgroundlogin.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1368, 768));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(backgroundlogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(backgroundlogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -208,13 +191,11 @@ public class LoginForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnlogin_cancel;
+    private javax.swing.JPanel backgroundlogin;
     private javax.swing.JButton btnlogin_signin;
     private javax.swing.JLabel faillable;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel passwordlable;
     private javax.swing.JPasswordField txtlogin_password;
